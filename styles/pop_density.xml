@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map>
+
+<Parameters>
+  <Parameter name="name"><![CDATA[Population Density]]></Parameter>
+  <Parameter name="minzoom">10</Parameter>
+  <Parameter name="maxzoom">16</Parameter>
+  <Parameter name="description"><![CDATA[Population Density]]></Parameter>
+</Parameters>
+
+
+<Style name="bg" filter-mode="first">
+  <Rule>
+    <Filter>([pop_densit] &gt; 89945) and ([pop_densit] &lt; 392950)</Filter>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#6600ff" />
+  </Rule>
+  <Rule>
+    <Filter>([pop_densit] &gt; 54726) and ([pop_densit] &lt; 89945)</Filter>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#6666ff" />
+  </Rule>
+  <Rule>
+    <Filter>([pop_densit] &gt; 34346) and ([pop_densit] &lt; 54726)</Filter>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#6699ff" />
+  </Rule>
+  <Rule>
+    <Filter>([pop_densit] &gt; 16579) and ([pop_densit] &lt; 34346)</Filter>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#66ccff" />
+  </Rule>
+  <Rule>
+    <Filter>([pop_densit] &lt; 16579)</Filter>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#99ffff" />
+  </Rule>
+  <Rule>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="bg"
+>
+    <StyleName>bg</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="file"><![CDATA[../shp/tiger-acs-block-group/tiger-acs-block-group.shp]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

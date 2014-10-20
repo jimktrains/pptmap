@@ -63,9 +63,35 @@
                       isBaseLayer: true,
                       getURL: getURL
                   });
+                  var pop_density = new OpenLayers.Layer.TMS("Population Density", "",
+                  {
+                      serviceVersion: 'tiles',
+                      layername: 'pop_density',
+                      alpha: true,
+                      type: 'png',
+                      isBaseLayer: false,
+                      getURL: getURL
+                  });
+                  var median_income = new OpenLayers.Layer.TMS("Median Income", "",
+                  {
+                      serviceVersion: 'tiles',
+                      layername: 'median_income',
+                      alpha: true,
+                      type: 'png',
+                      isBaseLayer: false,
+                      getURL: getURL
+                  });
+
+                  if (OpenLayers.Util.alphaHack() == false) {
+                    pop_density.setOpacity(0.5);
+                    median_income.setOpacity(0.5);
+                  }
+
 
                   map.addLayers([
                                  base,
+                                 pop_density,
+                                 median_income
                                  ]);
 
                   var switcherControl = new OpenLayers.Control.LayerSwitcher();
@@ -99,10 +125,8 @@
 
                 function resize() {  
                     var map = document.getElementById("map");  
-                    var subheader = document.getElementById("subheader");  
                     map.style.height = (getWindowHeight()-80) + "px";
                     map.style.width = (getWindowWidth()-20) + "px";
-                    subheader.style.width = (getWindowWidth()-20) + "px";
                     if (map.updateSize) { map.updateSize(); };
                 }
 

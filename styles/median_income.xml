@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map>
+
+<Parameters>
+  <Parameter name="name"><![CDATA[Population Density]]></Parameter>
+  <Parameter name="minzoom">10</Parameter>
+  <Parameter name="maxzoom">16</Parameter>
+  <Parameter name="description"><![CDATA[Population Density]]></Parameter>
+</Parameters>
+
+
+<Style name="bg" filter-mode="first">
+  <Rule>
+    <Filter>([med_incom] &gt; 90387) and ([med_incom] &lt; 245526)</Filter>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#6600ff" />
+  </Rule>
+  <Rule>
+    <Filter>([med_incom] &gt; 69812) and ([med_incom] &lt; 90387)</Filter>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#6666ff" />
+  </Rule>
+  <Rule>
+    <Filter>([med_incom] &gt; 55846) and ([med_incom] &lt; 69812)</Filter>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#6699ff" />
+  </Rule>
+  <Rule>
+    <Filter>([med_incom] &gt; 41658) and ([med_incom] &lt; 55846)</Filter>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#66ccff" />
+  </Rule>
+  <Rule>
+    <Filter>([med_incom] &lt; 41658)</Filter>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#99ffff" />
+  </Rule>
+  <Rule>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="bg"
+>
+    <StyleName>bg</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="file"><![CDATA[../shp/tiger-acs-block-group/tiger-acs-block-group.shp]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

@@ -1,0 +1,25 @@
+{
+  "interactivity": false,
+  "Layer": [
+    {
+      "name": "bg",
+      "srs-name": "4326",
+      "geometry": "polygon",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/tiger-acs-block-group/tiger-acs-block-group.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "bg",
+      "advanced": {}
+    }
+  ],
+  "name": "Population Density",
+  "Stylesheet": [
+    "median_income.mss"
+  ],
+  "minzoom": 10,
+  "maxzoom": 16,
+  "description": "Population Density"
+} 
