@@ -40,13 +40,16 @@ class MapMaker:
         (minLat, minLon, maxLat, maxLon) = self.gprj.TileLatLonBounds(x,y,z)
         bbox = mapnik.Envelope(minLon, minLat, maxLon, maxLat)
 
+        self.m.aspect_fix_mode = mapnik.aspect_fix_mode.ADJUST_CANVAS_WIDTH
         self.m.zoom_to_box(bbox)
+        print self.m.envelope()
         print bbox
+        print (self.m.width, self.m.height)
 
-        im = mapnik.Image(self.sx, self.sy)
+        im = mapnik.Image(self.m.width, self.m.height)
         mapnik.render(self.m, im)
-        view = im.view(self.sx/2, self.sy/2, self.sx, self.sy)
-        
+
+        view = im.view(0,0,self.m.width, self.m.height)
         view.save(outname, ext)
         
         fd = open(outname)
