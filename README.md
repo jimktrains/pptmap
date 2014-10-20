@@ -4,4 +4,4 @@ Run the tile server by `python server.py`
 
 mapnik and flask are require to run the tile server.
 
-Code based on: http://wiki.openstreetmap.org/wiki/Creating_your_own_tiles
+Code based on: http://wiki.openstreetmap.org/wiki/Howto_real_time_rendering_with_mapnik_and_mod_python
