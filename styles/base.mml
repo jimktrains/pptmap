@@ -1,0 +1,118 @@
+{
+  "interactivity": false,
+  "Layer": [
+    {
+      "name": "natural",
+      "srs-name": "4326",
+      "geometry": "polygon",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/osm-natural/osm-natural.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "natual",
+      "advanced": {}
+    },
+    {
+      "name": "tigerwater",
+      "srs-name": "4326",
+      "geometry": "polygon",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/tiger-water/tiger-water.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "tigerwater",
+      "advanced": {}
+    },
+    {
+      "name": "tigermunicipalities",
+      "srs-name": "4326",
+      "geometry": "polygon",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/tiger-municipalities/tiger-municipalities.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "tigermunicipalities",
+      "advanced": {}
+    },
+    {
+      "name": "tigermunicipalities-labels",
+      "srs-name": "4326",
+      "geometry": "polygon",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/tiger-municipalities/tiger-municipalities.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "tigermunicipalities-labels",
+      "advanced": {}
+    },
+    {
+      "name": "roads",
+      "srs-name": "4326",
+      "geometry": "polygon",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/osm-roads/osm-roads.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "roads",
+      "advanced": {}
+    },
+    {
+      "name": "road-labels",
+      "srs-name": "4326",
+      "geometry": "polygon",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/osm-roads/osm-roads.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "roadlabels",
+      "advanced": {}
+    },
+    {
+      "name": "osmrailways",
+      "srs-name": "4326",
+      "geometry": "polygon",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/osm-railways/osm-railways.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "osmrailways",
+      "advanced": {}
+    },
+    {
+      "name": "tigercounty",
+      "srs-name": "4326",
+      "geometry": "polygon",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/tiger-county/tiger-county.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "tigercounty",
+      "advanced": {}
+    }
+  ],
+  "name": "PPT Map Base",
+  "Stylesheet": [
+    "base.mss",
+    "highway.mss",
+    "labels.mss"
+  ],
+  "minzoom": 10,
+  "maxzoom": 16,
+  "description": "PPT Map Base"
+} 

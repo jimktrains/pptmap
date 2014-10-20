@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE Map[]>
-<Map srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+<Map background-color="#f5fdf0">
 
 <Parameters>
-  <Parameter name="bounds">-80.365,40.1904,-79.6797,40.6765</Parameter>
-  <Parameter name="center">-79.9942,40.449,10</Parameter>
-  <Parameter name="format">png8</Parameter>
+  <Parameter name="name"><![CDATA[PPT Map Base]]></Parameter>
   <Parameter name="minzoom">10</Parameter>
-  <Parameter name="maxzoom">15</Parameter>
-  <Parameter name="scale">1</Parameter>
-  <Parameter name="metatile">2</Parameter>
-  <Parameter name="id"><![CDATA[base]]></Parameter>
-  <Parameter name="_updated">1412953772000</Parameter>
-  <Parameter name="tilejson"><![CDATA[2.0.0]]></Parameter>
-  <Parameter name="scheme"><![CDATA[xyz]]></Parameter>
+  <Parameter name="maxzoom">16</Parameter>
+  <Parameter name="description"><![CDATA[PPT Map Base]]></Parameter>
 </Parameters>
 
 <FontSet name="fontset-0">
@@ -88,11 +81,11 @@
   </Rule>
 </Style>
 <Layer name="natural"
-  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+>
     <StyleName>natural</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[../shp/osm-natural/osm-natural.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="file"><![CDATA[../shp/osm-natural/osm-natural.shp]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -102,25 +95,11 @@
   </Rule>
 </Style>
 <Layer name="tigerwater"
-  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+>
     <StyleName>tigerwater</StyleName>
     <Datasource>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
        <Parameter name="file"><![CDATA[../shp/tiger-water/tiger-water.shp]]></Parameter>
-       <Parameter name="type"><![CDATA[shape]]></Parameter>
-    </Datasource>
-  </Layer>
-
-<Style name="tigercounty" filter-mode="first">
-  <Rule>
-    <LineSymbolizer stroke="#000000" stroke-width="0.5" />
-  </Rule>
-</Style>
-<Layer name="tigercounty"
-  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
-    <StyleName>tigercounty</StyleName>
-    <Datasource>
-       <Parameter name="file"><![CDATA[../shp/tiger-county/tiger-county.shp]]></Parameter>
-       <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -130,14 +109,27 @@
   </Rule>
 </Style>
 <Layer name="tigermunicipalities"
-  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+>
     <StyleName>tigermunicipalities</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[../shp/tiger-municipalities/tiger-municipalities.shp]]></Parameter>
-       <Parameter name="id"><![CDATA[tigermunicipalities]]></Parameter>
-       <Parameter name="project"><![CDATA[base]]></Parameter>
-       <Parameter name="srs"><![CDATA[]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="file"><![CDATA[../shp/tiger-municipalities/tiger-municipalities.shp]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tigermunicipalities-labels" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <TextSymbolizer fontset-name="fontset-0" fill="#444444" halo-fill="rgba(255, 255, 255, 0.8)" halo-radius="2" text-transform="uppercase" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="tigermunicipalities-labels"
+>
+    <StyleName>tigermunicipalities-labels</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="file"><![CDATA[../shp/tiger-municipalities/tiger-municipalities.shp]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -2929,13 +2921,13 @@
   </Rule>
 </Style>
 <Layer name="roads"
-  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+>
     <StyleName>roads-line</StyleName>
     <StyleName>roads-case</StyleName>
     <StyleName>roads-fill</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[../shp/osm-roads/osm-roads.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="file"><![CDATA[../shp/osm-roads/osm-roads.shp]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -3055,11 +3047,11 @@
   </Rule>
 </Style>
 <Layer name="road-labels"
-  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+>
     <StyleName>road-labels</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[../shp/osm-roads/osm-roads.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="file"><![CDATA[../shp/osm-roads/osm-roads.shp]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -3078,27 +3070,25 @@
   </Rule>
 </Style>
 <Layer name="osmrailways"
-  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+>
     <StyleName>osmrailways</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[../shp/osm-railways/osm-railways.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="file"><![CDATA[../shp/osm-railways/osm-railways.shp]]></Parameter>
     </Datasource>
   </Layer>
 
-<Style name="tigermunicipalities-labels" filter-mode="first">
+<Style name="tigercounty" filter-mode="first">
   <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <TextSymbolizer fontset-name="fontset-0" fill="#444444" halo-fill="rgba(255, 255, 255, 0.8)" halo-radius="2" text-transform="uppercase" ><![CDATA[[name]]]></TextSymbolizer>
+    <LineSymbolizer stroke="#000000" stroke-width="0.5" />
   </Rule>
 </Style>
-<Layer name="tigermunicipalities-labels"
-  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
-    <StyleName>tigermunicipalities-labels</StyleName>
+<Layer name="tigercounty"
+>
+    <StyleName>tigercounty</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[../shp/tiger-municipalities/tiger-municipalities.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="file"><![CDATA[../shp/tiger-county/tiger-county.shp]]></Parameter>
     </Datasource>
   </Layer>
 
