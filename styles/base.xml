@@ -1,0 +1,3105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+
+<Parameters>
+  <Parameter name="bounds">-80.365,40.1904,-79.6797,40.6765</Parameter>
+  <Parameter name="center">-79.9942,40.449,10</Parameter>
+  <Parameter name="format">png8</Parameter>
+  <Parameter name="minzoom">10</Parameter>
+  <Parameter name="maxzoom">15</Parameter>
+  <Parameter name="scale">1</Parameter>
+  <Parameter name="metatile">2</Parameter>
+  <Parameter name="id"><![CDATA[base]]></Parameter>
+  <Parameter name="_updated">1412953772000</Parameter>
+  <Parameter name="tilejson"><![CDATA[2.0.0]]></Parameter>
+  <Parameter name="scheme"><![CDATA[xyz]]></Parameter>
+</Parameters>
+
+<FontSet name="fontset-0">
+  <Font face-name="Ubuntu Regular"/>
+  <Font face-name="Arial Regular"/>
+  <Font face-name="DejaVu Sans Book"/>
+</FontSet>
+<Style name="natural" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([type] = 'university')</Filter>
+    <PolygonSymbolizer fill="#f8e8c8" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([type] = 'college')</Filter>
+    <PolygonSymbolizer fill="#f8e8c8" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([type] = 'school')</Filter>
+    <PolygonSymbolizer fill="#f8e8c8" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([type] = 'park')</Filter>
+    <PolygonSymbolizer fill="#cceeaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([type] = 'recreation_ground')</Filter>
+    <PolygonSymbolizer fill="#cceeaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([type] = 'village_green')</Filter>
+    <PolygonSymbolizer fill="#cceeaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([type] = 'cemetery')</Filter>
+    <PolygonSymbolizer fill="#cceeaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([type] = 'common')</Filter>
+    <PolygonSymbolizer fill="#cceeaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#cceeaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([type] = 'pitch')</Filter>
+    <PolygonSymbolizer fill="#cceeaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([type] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#cceeaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([type] = 'forest')</Filter>
+    <PolygonSymbolizer fill="#cceeaa" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'water')</Filter>
+    <PolygonSymbolizer fill="#c0d8ff" gamma="0.5" />
+  </Rule>
+</Style>
+<Layer name="natural"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>natural</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[../shp/osm-natural/osm-natural.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tigerwater" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#c0d8ff" gamma="0.5" />
+  </Rule>
+</Style>
+<Layer name="tigerwater"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>tigerwater</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[../shp/tiger-water/tiger-water.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tigercounty" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke="#000000" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Layer name="tigercounty"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>tigercounty</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[../shp/tiger-county/tiger-county.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tigermunicipalities" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke="#800080" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Layer name="tigermunicipalities"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>tigermunicipalities</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[../shp/tiger-municipalities/tiger-municipalities.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[tigermunicipalities]]></Parameter>
+       <Parameter name="project"><![CDATA[base]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="roads-fill" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="11" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="7" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="11" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="7" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="15" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="13" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="15" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="13" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'pedestrian') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'pedestrian') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'pedestrian') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'pedestrian') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="10" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="11" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="7" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="11" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="7" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="11" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="7" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="11" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="7" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="11" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="7" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#ffe3a2" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="11" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="7" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#ffe29d" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="15" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="13" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="15" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="13" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="15" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="13" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="15" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="13" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="15" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="13" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#f88d74" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="15" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="13" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="9" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="6" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([tunnel] = 1) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#fab2a1" stroke-linecap="round" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([tunnel] != 1) and ([bridge] != 1)</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#dddddd" />
+  </Rule>
+</Style>
+<Style name="roads-case" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'pedestrian') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'pedestrian') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'pedestrian') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'pedestrian') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'pedestrian') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'service') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'service') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'service') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'service') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'service')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'motorway_link') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#c45136" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'motorway_link') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'motorway_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#c45136" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'motorway_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'motorway_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#f56544" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke="#f56544" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'secondary_link') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#cc9e30" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'secondary_link') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'secondary_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#cc9e30" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'secondary_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#ffc53c" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke="#ffc53c" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'trunk_link') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#c45136" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'trunk_link') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'trunk_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#c45136" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'trunk_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'trunk_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#f56544" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke="#f56544" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'primary_link') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#cc9e30" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'primary_link') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'primary_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#cc9e30" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'primary_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'primary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#ffc53c" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke="#ffc53c" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'tertiary_link') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary_link') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'tertiary_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary_link') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary_link') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'unclassified') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'unclassified') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'unclassified') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'unclassified') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'unclassified') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'residential') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'residential') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'residential') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'residential') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'residential') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'living_street') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'living_street') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'living_street') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'living_street') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'living_street') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'tertiary') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'tertiary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'secondary') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#cc9e30" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'secondary') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'secondary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#cc9e30" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'secondary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'secondary') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#ffc53c" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke="#ffc53c" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'primary') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#cc9e30" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'primary') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'primary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#cc9e30" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'primary') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'primary') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#ffc53c" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'primary')</Filter>
+    <LineSymbolizer stroke="#ffc53c" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'trunk') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#c45136" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'trunk') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'trunk') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#c45136" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'trunk') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'trunk') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#f56544" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke="#f56544" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'motorway') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#c45136" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'motorway') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'motorway') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#c45136" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'motorway') and ([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'motorway') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#f56544" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#f56544" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([bridge] = 1) and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([bridge] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([bridge] = 1)</Filter>
+    <LineSymbolizer stroke="#888888" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke-linecap="butt" stroke-dasharray="6, 3" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="0" stroke="#aaaaaa" />
+  </Rule>
+</Style>
+<Style name="roads-line" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'service')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'service')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'pedestrian')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'primary_link')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'residential')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'residential')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke="#aaaaaa" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#f56544" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#f56544" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#f56544" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#f56544" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#99ccaa" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#99ccaa" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#99ccaa" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke="#99ccaa" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'steps')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#aacc99" stroke-dasharray="2, 2" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'steps')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#aacc99" stroke-dasharray="2, 2" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'steps')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#aacc99" stroke-dasharray="2, 2" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'steps')</Filter>
+    <LineSymbolizer stroke="#aacc99" stroke-dasharray="2, 2" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'track')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'track')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'track')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'track')</Filter>
+    <LineSymbolizer stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'footway')</Filter>
+    <LineSymbolizer stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'bridleway')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'bridleway')</Filter>
+    <LineSymbolizer stroke-width="1.6" stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'bridleway')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'bridleway')</Filter>
+    <LineSymbolizer stroke="#aacc99" stroke-dasharray="4, 1" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'primary')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#ffc53c" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#ffc53c" />
+  </Rule>
+</Style>
+<Layer name="roads"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>roads-line</StyleName>
+    <StyleName>roads-case</StyleName>
+    <StyleName>roads-fill</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[../shp/osm-roads/osm-roads.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="road-labels" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'secondary')</Filter>
+    <TextSymbolizer size="11" fill="#3c1b00" halo-fill="#ffdc89" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'secondary')</Filter>
+    <TextSymbolizer fill="#3c1b00" halo-fill="#ffdc89" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'secondary')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'primary')</Filter>
+    <TextSymbolizer size="11" fill="#3c1b00" halo-fill="#ffdc89" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'primary')</Filter>
+    <TextSymbolizer fill="#3c1b00" halo-fill="#ffdc89" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'primary')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'trunk')</Filter>
+    <TextSymbolizer size="11" fill="#370306" halo-fill="#f9a18d" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'trunk')</Filter>
+    <TextSymbolizer fill="#370306" halo-fill="#f9a18d" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'trunk')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'motorway')</Filter>
+    <TextSymbolizer size="12" fill="#370306" halo-fill="#f9a18d" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'motorway')</Filter>
+    <TextSymbolizer size="11" fill="#370306" halo-fill="#f9a18d" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'motorway')</Filter>
+    <TextSymbolizer fill="#370306" halo-fill="#f9a18d" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([type] = 'motorway')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'road')</Filter>
+    <TextSymbolizer fill="#444444" halo-fill="#ffffff" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'road')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'residential')</Filter>
+    <TextSymbolizer fill="#444444" halo-fill="#ffffff" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'residential')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'tertiary')</Filter>
+    <TextSymbolizer fill="#444444" halo-fill="#ffffff" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'tertiary')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'unclassified')</Filter>
+    <TextSymbolizer fill="#444444" halo-fill="#ffffff" fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'unclassified')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <TextSymbolizer fontset-name="fontset-0" halo-radius="1" placement="line" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="road-labels"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>road-labels</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[../shp/osm-roads/osm-roads.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="osmrailways" filter-mode="first">
+  <Rule>
+    <Filter>([type] = 'funicular')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#c0c0c0" stroke-dasharray="6, 5" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'rail')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#c0c0c0" stroke-dasharray="5, 5" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'light_rail')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#c0c0c0" stroke-dasharray="5, 5" />
+  </Rule>
+</Style>
+<Layer name="osmrailways"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>osmrailways</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[../shp/osm-railways/osm-railways.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tigermunicipalities-labels" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <TextSymbolizer fontset-name="fontset-0" fill="#444444" halo-fill="rgba(255, 255, 255, 0.8)" halo-radius="2" text-transform="uppercase" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="tigermunicipalities-labels"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>tigermunicipalities-labels</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[../shp/tiger-municipalities/tiger-municipalities.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

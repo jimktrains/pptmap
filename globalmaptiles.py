@@ -165,7 +165,7 @@ class GlobalMercator(object):
 
     def __init__(self, tileSize=256):
         "Initialize the TMS Global Mercator pyramid"
-        self.tileSize = tileSize
+        self.tileSize = float(tileSize)
         self.initialResolution = 2 * math.pi * 6378137 / self.tileSize
         # 156543.03392804062 for tileSize 256 pixels
         self.originShift = 2 * math.pi * 6378137 / 2.0
@@ -185,6 +185,7 @@ class GlobalMercator(object):
 
         lon = (mx / self.originShift) * 180.0
         lat = (my / self.originShift) * 180.0
+
 
         lat = 180 / math.pi * (2 * math.atan( math.exp( lat * math.pi / 180.0)) - math.pi / 2.0)
         return lat, lon
@@ -351,6 +352,14 @@ class GlobalGeodetic(object):
 if __name__ == "__main__":
     import sys, os
         
+
+    m = GlobalMercator()
+
+    print m.TileLatLonBounds(284,638, 10)
+    print m.TileLatLonBounds(284,637, 10)
+
+    sys.exit(0)
+
     def Usage(s = ""):
         print "Usage: globalmaptiles.py [-profile 'mercator'|'geodetic'] zoomlevel lat lon [latmax lonmax]"
         print
