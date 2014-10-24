@@ -7,14 +7,39 @@
                 html, body { overflow: hidden; padding: 0; height: 100%; width: 100%; font-family: 'Lucida Grande',Geneva,Arial,Verdana,sans-serif; }
                 body { margin: 10px; background: #fff; }
                 h1 { margin: 0; padding: 6px; border:0; font-size: 20pt; }
-            #header { height: 43px; padding: 0; background-color: #eee; border: 1px solid #888; }
-            #subheader { height: 12px; text-align: right; font-size: 10px; color: #555;}
-            #map { height: 95%; border: 1px solid #888; }
+            #map { height: 90%; border: 1px solid #888; float:left;}
+            #route-container {
+              float: right;
+              width: 200px;
+              height: 500px;
+              margin-right: 10px;
+            }
+            #routes {
+              width: 100%;
+              height: 95%;
+            }
             .olImageLoadError { display: none; }
             .olControlLayerSwitcher .layersDiv { border-radius: 10px 0 0 10px; } 
         </style>
             <script src="OpenLayers-2.12.js"></script>
+            <script src="lodash-2.4.1.min.js"></script>
+            <script src="jquery-2.1.1.min.js"></script>
             <script>
+              var routes = ["1","11","12","13","14","15","16","17","18","19L","2","20","21","22","24","26","27","28X","29","31","36","38","39","4","40","41","43","44","48","51","51L","52L","53","53L","54","56","57","58","59","6","60","61A","61B","61C","61D","63","64","65","67","68","69","7","71","71A","71B","71C","71D","74","75","77","78","79","8","81","82","83","86","87","88","89","91","93","BLLB","BLSV","G2","G3","G31","O1","O12","O5","P1","P10","P12","P13","P16","P17","P2","P3","P67","P68","P69","P7","P71","P76","P78","RED","Y1","Y45","Y46","Y47","Y49"]
+
+              var buses = _.zipObject(routes, _.map(routes, function(r) {
+                return new OpenLayers.Layer.TMS(r, "", {
+                    serviceVersion: 'tiles',
+                    layername: r,
+                    alpha: true,
+                    type: 'png',
+                    isBaseLayer: false,
+                    visibility: false,
+                    displayInLayerSwitcher: false,
+                    getURL: getURL
+                });
+             }));
+
               var map;
               var mapBounds = new OpenLayers.Bounds( -80.5077789799, 40.1788593348, -79.453091919, 40.7139417357);
               var mapMinZoom = 8;
@@ -43,15 +68,15 @@
                   }
               } 
           
-
               function init(){
                   var options = {
                       div: "map",
                       controls: [],
                       projection: "EPSG:900913",
                       displayProjection: new OpenLayers.Projection("EPSG:4326"),
-                      numZoomLevels: 20
+                      numZoomLevels: 20,
                   };
+
                   map = new OpenLayers.Map(options);
 
                   var base = new OpenLayers.Layer.TMS("Base", "",
@@ -70,6 +95,7 @@
                       alpha: true,
                       type: 'png',
                       isBaseLayer: false,
+                      visibility: false,
                       getURL: getURL
                   });
                   var median_income = new OpenLayers.Layer.TMS("Median Income", "",
@@ -79,24 +105,94 @@
                       alpha: true,
                       type: 'png',
                       isBaseLayer: false,
+                      visibility: false,
                       getURL: getURL
                   });
+                  var isos = new OpenLayers.Layer.TMS("ISOs", "",
+                  {
+                      serviceVersion: 'tiles',
+                      layername: 'isos',
+                      alpha: true,
+                      type: 'png',
+                      isBaseLayer: false,
+                      visibility: false,
+                      getURL: getURL
+                  });
+             $(function(){
+               _.map(routes, function(r) {
+                $('#routes').append($('<option/>', {
+                  value: r,
+                  text: r
+                }));
+               });
+
+               $("#routes").change(function(e) {
+                  cur = _.zipObject(routes, _.map(routes, function(r) {
+                    return buses[r].visibility;
+                  }));
+                  to = _.zipObject(routes, _.map(routes, function(r) { 
+                    return false; }
+                  ));
+                  $('#routes :selected').each(function(i, selected){
+                     to[$(selected).val()] = true;
+                  });
+
+                  _.map(routes, function (r) {
+                    if (cur[r] != to[r]) {
+                      buses[r].setVisibility(to[r]);
+                    }
+                  });
+               });
+
+               $("#chloro").change(function(e) {
+                switch ($(this).val()) {
+                  case 'pop_density':
+                    pop_density.setVisibility(true);
+                    median_income.setVisibility(false);
+                    break;
+                  case 'median_income':
+                    pop_density.setVisibility(false);
+                    median_income.setVisibility(true);
+                    break;
+                  default:
+                    pop_density.setVisibility(false);
+                    median_income.setVisibility(false);
+                    break;
+                }
+               });
+
+               $("#check_isos").change(function(e) {
+                  isos.setVisibility($(this).is(":checked"));
+               });
+
+               $("#routes-select-all").click(function(e) {
+                 $('#routes option').prop('selected', true);
+                 $('#routes').change();
+               });
+               $("#routes-select-none").click(function(e) {
+                 $('#routes option').prop('selected', false);
+                 $('#routes').change();
+               });
+             });
 
                   if (OpenLayers.Util.alphaHack() == false) {
                     pop_density.setOpacity(0.5);
                     median_income.setOpacity(0.5);
-                  }
+                    isos.setOpacity(0.75);
 
+                  }
 
                   map.addLayers([
                                  base,
                                  pop_density,
-                                 median_income
+                                 median_income,
+                                 isos,
                                  ]);
+                  map.addLayers(_.values(buses));
 
-                  var switcherControl = new OpenLayers.Control.LayerSwitcher();
-                  map.addControl(switcherControl);
-                  switcherControl.maximizeControl();
+                  // var switcherControl = new OpenLayers.Control.LayerSwitcher();
+                  // map.addControl(switcherControl);
+                  // switcherControl.maximizeControl();
 
                   map.zoomToExtent(mapBounds.transform(map.displayProjection, map.projection));
           
@@ -104,8 +200,55 @@
                                    new OpenLayers.Control.Navigation(),
                                    new OpenLayers.Control.MousePosition(),
                                    new OpenLayers.Control.ArgParser(),
+                                   new OpenLayers.Control.ScaleLine(),
                                    new OpenLayers.Control.Attribution()]);
+                  var c = new OpenLayers.Control.Click();
+                  map.addControl(c);
+                  c.activate();
+
+
               }
+
+
+           OpenLayers.Control.Click = OpenLayers.Class(OpenLayers.Control, {                
+                defaultHandlerOptions: {
+                    'single': true,
+                    'double': false,
+                    'pixelTolerance': 0,
+                    'stopSingle': false,
+                    'stopDouble': false
+                },
+
+                initialize: function(options) {
+                    this.handlerOptions = OpenLayers.Util.extend(
+                        {}, this.defaultHandlerOptions
+                    );
+                    OpenLayers.Control.prototype.initialize.apply(
+                        this, arguments
+                    ); 
+                    this.handler = new OpenLayers.Handler.Click(
+                        this, 
+                        {
+                          "click": function(evt) {
+                            console.log(evt);
+                            var smlonlat = map.getLonLatFromPixel(evt.xy);
+                            var lonlat = OpenLayers.Layer.SphericalMercator.inverseMercator(smlonlat.lon, smlonlat.lat);
+                            $.get("http://localhost:5000/query/pop_density/" + lonlat.lon + "/" + lonlat.lat, function(data) {
+                              data = 
+                              $('#data').empty();
+                              _.map(data, function(d) {
+                              console.log(d);
+                              //  _.map(_.keys(d.properties), function(p) {
+                              //    $('#data').append("<p>" + p + ": " + d.properties[p] + "</p>");
+                              //  });
+                              });
+                            });
+                          }
+                        }, 
+                        this.handlerOptions
+                    );
+                }, 
+            });
           
            function getWindowHeight() {
                 if (self.innerHeight) return self.innerHeight;
@@ -126,7 +269,7 @@
                 function resize() {  
                     var map = document.getElementById("map");  
                     map.style.height = (getWindowHeight()-80) + "px";
-                    map.style.width = (getWindowWidth()-20) + "px";
+                    map.style.width = (getWindowWidth()-220) + "px";
                     if (map.updateSize) { map.updateSize(); };
                 }
 
@@ -136,6 +279,25 @@
               </head>
               <body onload="init()">
                 <div id="map"></div>
+                <div id="route-container">
+                  <div>
+                    <h3>Choropleth Layers</h3>
+                    <select id="chloro">
+                      <option value="None" selected="selected">None</option>
+                      <option value="pop_density">Population Density</option>
+                      <option value="median_income">Median Income</option>
+                    </select>
+                  </div>
+                  <hr>
+                  <div>
+                    <h3>Other Layers</h3>
+                    <p><input type="checkbox" id="check_isos"> Distance to Bus stop</p>
+                  </div>
+                  <p>Routes</p>
+                    <button id="routes-select-all">Select All</button>
+                    <button id="routes-select-none">Select None</button>
+                  <select id="routes" multiple="multiple"></select>
+                </div>
                 <script type="text/javascript" >resize()</script>
               </body>
             </html>
