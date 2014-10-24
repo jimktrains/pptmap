@@ -7,14 +7,14 @@ import mapnik
 
 app = Flask(__name__)
 
-cors = CORS(app);
+cors = CORS(app, resources={r"/*": {"origins": "*"}});
 
 renderers = get_renderers('styles', 16)
-print renderers
 
-@app.route("/")
-def hello():
-    return "Hello World!"
+@app.route('/')
+def root():
+    print "test"
+    return app.send_static_file('index.html')
 
 @app.route('/tiles/<layer>/<int:z>/<int:x>/<int:y>.png')
 def tile_render(layer, z, x, y):
@@ -27,6 +27,7 @@ def tile_render(layer, z, x, y):
         } 
     else:
        return "No Renderer for " + layer, 404
+
 @app.route('/query/<layer>/<x>/<y>')
 def query(layer, x, y):
     p = mapnik.Coord(float(x),float(y))
@@ -36,11 +37,17 @@ def query(layer, x, y):
             for feat in l.datasource.features_at_point(p):
                 feats.append(json.loads(feat.to_geojson()))
         return json.dumps(feats), 200, {
-            'Control-Type': 'application/json',
+            'Content-Type': 'application/json',
             'Cache-Control': 'max-age=0'
         }
     else:
         return "No Renderer for " + layer, 404
+
+@app.route('/<path:path>')
+def static_proxy(path):
+  # send_static_file will guess the correct MIME type
+    return app.send_static_file(path)
+
 
 if __name__ == "__main__":
     app.debug = True

@@ -9,7 +9,6 @@ from globalmaptiles import GlobalGeodetic
 def get_renderers(path, zmax = 20):
     r = {}
     for filename in os.listdir(path):
-        print filename
         if filename.startswith("."):
             continue
         if not filename.endswith(".xml"):
