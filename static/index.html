@@ -8,9 +8,16 @@
                 body { margin: 10px; background: #fff; }
                 h1 { margin: 0; padding: 6px; border:0; font-size: 20pt; }
             #map { height: 90%; border: 1px solid #888; float:left;}
+            #data {
+              float: left;
+              width: 190px;
+              height: 800px;
+              margin-right: 10px;
+              overflow: scroll;
+            }
             #route-container {
               float: right;
-              width: 200px;
+              width: 190px;
               height: 500px;
               margin-right: 10px;
             }
@@ -40,6 +47,8 @@
                 });
              }));
 
+             var geojson_format = new OpenLayers.Format.GeoJSON();
+             var vector_layer = new OpenLayers.Layer.Vector(); 
               var map;
               var mapBounds = new OpenLayers.Bounds( -80.5077789799, 40.1788593348, -79.453091919, 40.7139417357);
               var mapMinZoom = 8;
@@ -56,7 +65,7 @@
                   if (this.map.baseLayer.CLASS_NAME === 'OpenLayers.Layer.Bing') {
                       z+=1;
                   }
-                  var path = "http://localhost:5000/" + this.serviceVersion + "/" + this.layername + "/" + z + "/" + x + "/" + y + "." + this.type; 
+                  var path = "/" + this.serviceVersion + "/" + this.layername + "/" + z + "/" + x + "/" + y + "." + this.type; 
                   var url = this.url;
                   if (OpenLayers.Util.isArray(url)) {
                       url = this.selectUrl(path, url);
@@ -190,9 +199,9 @@
                                  ]);
                   map.addLayers(_.values(buses));
 
-                  // var switcherControl = new OpenLayers.Control.LayerSwitcher();
-                  // map.addControl(switcherControl);
-                  // switcherControl.maximizeControl();
+                  var switcherControl = new OpenLayers.Control.LayerSwitcher();
+                  map.addControl(switcherControl);
+                  switcherControl.maximizeControl();
 
                   map.zoomToExtent(mapBounds.transform(map.displayProjection, map.projection));
           
@@ -206,6 +215,8 @@
                   map.addControl(c);
                   c.activate();
 
+               map.addLayer(vector_layer);
+               vector_layer.setVisibility(true);
 
               }
 
@@ -230,17 +241,29 @@
                         this, 
                         {
                           "click": function(evt) {
-                            console.log(evt);
+                            vector_layer.removeAllFeatures();
+                            $('#data').empty();
                             var smlonlat = map.getLonLatFromPixel(evt.xy);
                             var lonlat = OpenLayers.Layer.SphericalMercator.inverseMercator(smlonlat.lon, smlonlat.lat);
-                            $.get("http://localhost:5000/query/pop_density/" + lonlat.lon + "/" + lonlat.lat, function(data) {
-                              data = 
-                              $('#data').empty();
+                            var url = "/query/pop_density/" + lonlat.lon + "/" + lonlat.lat;
+                            $.get(url, function(data) {
                               _.map(data, function(d) {
-                              console.log(d);
-                              //  _.map(_.keys(d.properties), function(p) {
-                              //    $('#data').append("<p>" + p + ": " + d.properties[p] + "</p>");
-                              //  });
+                                text = _.map(_.keys(d.properties), function(p) {
+                                  return "<p>" + p + ": " + d.properties[p] + "</p>";
+                                }).join('');
+                                $('#data').append("<div>" + text + "</div>");
+                                $('#data').append("<hr>");
+                                features = geojson_format.read(d);
+                                _.map(features, function(f) { 
+                                  console.log(f);
+                                  f.style = {
+                                    display: 'show',
+                                    stroke: true,
+                                    fill: true
+                                  };
+                                });
+                                vector_layer.addFeatures(features);
+                                vector_layer.redraw();
                               });
                             });
                           }
@@ -269,7 +292,7 @@
                 function resize() {  
                     var map = document.getElementById("map");  
                     map.style.height = (getWindowHeight()-80) + "px";
-                    map.style.width = (getWindowWidth()-220) + "px";
+                    map.style.width = (getWindowWidth()-420) + "px";
                     if (map.updateSize) { map.updateSize(); };
                 }
 
@@ -279,6 +302,7 @@
               </head>
               <body onload="init()">
                 <div id="map"></div>
+                <div id="data"></div>
                 <div id="route-container">
                   <div>
                     <h3>Choropleth Layers</h3>
