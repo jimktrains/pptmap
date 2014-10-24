@@ -1,0 +1,26 @@
+{
+  "interactivity": false,
+  "Layer": [
+    {
+      "name": "route",
+      "srs-name": "4326",
+      "geometry": "line",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/Y49/Y49.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "route",
+      "advanced": {}
+    }
+  ],
+  "name": "Route Y49",
+  "Stylesheet": [
+    "route.mss"
+  ],
+  "minzoom": 10,
+  "maxzoom": 16,
+  "description": "Route Y49"
+} 
+

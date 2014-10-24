@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="name"><![CDATA[Route 27]]></Parameter>
+  <Parameter name="minzoom">10</Parameter>
+  <Parameter name="maxzoom">16</Parameter>
+  <Parameter name="description"><![CDATA[Route 27]]></Parameter>
+</Parameters>
+
+
+<Style name="route" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke="#0000ff" />
+  </Rule>
+</Style>
+<Layer name="route"
+>
+    <StyleName>route</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="file"><![CDATA[../shp/27/27.shp]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

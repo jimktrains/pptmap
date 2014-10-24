@@ -1,0 +1,26 @@
+{
+  "interactivity": false,
+  "Layer": [
+    {
+      "name": "route",
+      "srs-name": "4326",
+      "geometry": "line",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/40/40.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "route",
+      "advanced": {}
+    }
+  ],
+  "name": "Route 40",
+  "Stylesheet": [
+    "route.mss"
+  ],
+  "minzoom": 10,
+  "maxzoom": 16,
+  "description": "Route 40"
+} 
+

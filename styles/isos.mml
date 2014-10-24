@@ -1,0 +1,26 @@
+{
+  "interactivity": false,
+  "Layer": [
+    {
+      "name": "isos",
+      "srs-name": "4326",
+      "geometry": "line",
+      "class": "",
+      "Datasource": { 
+        "type": "shape",
+        "file": "../shp/roads_stops_iso_quart_mi/roads_stops_iso_quart_mi.shp"
+      },
+      "extent": [-80.365,40.1904, -79.6797,40.6765],
+      "id": "isos",
+      "advanced": {}
+    }
+  ],
+  "name": "Distance from Stop",
+  "Stylesheet": [
+    "isos.mss"
+  ],
+  "minzoom": 10,
+  "maxzoom": 16,
+  "description": "Distance from Stop"
+} 
+

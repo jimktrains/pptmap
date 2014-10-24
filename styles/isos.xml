@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="name"><![CDATA[Distance from Stop]]></Parameter>
+  <Parameter name="minzoom">10</Parameter>
+  <Parameter name="maxzoom">16</Parameter>
+  <Parameter name="description"><![CDATA[Distance from Stop]]></Parameter>
+</Parameters>
+
+
+<Style name="isos" filter-mode="first">
+  <Rule>
+    <Filter>([cat] = 9)</Filter>
+    <LineSymbolizer stroke="#ff0000" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([cat] = 8)</Filter>
+    <LineSymbolizer stroke="#ff3f00" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([cat] = 7)</Filter>
+    <LineSymbolizer stroke="#ff7f00" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([cat] = 6)</Filter>
+    <LineSymbolizer stroke="#ffbf00" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([cat] = 5)</Filter>
+    <LineSymbolizer stroke="#ffff00" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([cat] = 4)</Filter>
+    <LineSymbolizer stroke="#bfff00" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([cat] = 3)</Filter>
+    <LineSymbolizer stroke="#7fff00" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([cat] = 2)</Filter>
+    <LineSymbolizer stroke="#3fff00" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <Filter>([cat] = 1)</Filter>
+    <LineSymbolizer stroke="#00ff00" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <LineSymbolizer stroke-width="2" />
+  </Rule>
+</Style>
+<Layer name="isos"
+>
+    <StyleName>isos</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="file"><![CDATA[../shp/roads_stops_iso_quart_mi/roads_stops_iso_quart_mi.shp]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
