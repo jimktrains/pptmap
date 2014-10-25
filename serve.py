@@ -10,7 +10,6 @@ renderers = get_renderers('styles', 16)
 
 @app.route('/')
 def root():
-    print "test"
     return app.send_static_file('index.html')
 
 @app.route('/tiles/<layer>/<int:z>/<int:x>/<int:y>.png')
