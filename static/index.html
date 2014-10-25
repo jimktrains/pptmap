@@ -52,8 +52,6 @@
                 });
              }));
 
-             var geojson_format = new OpenLayers.Format.GeoJSON();
-             var vector_layer = new OpenLayers.Layer.Vector(); 
               var map;
               var mapBounds = new OpenLayers.Bounds( -80.5077789799, 40.1788593348, -79.453091919, 40.7139417357);
               var mapMinZoom = 8;
@@ -81,17 +79,33 @@
                       return emptyTileURL;
                   }
               } 
+             var geojson_format;
+             var vector_layer;
+
+             var wgs84 = new OpenLayers.Projection("EPSG:4326");
+             var sm = new OpenLayers.Projection("EPSG:900913");
           
               function init(){
                   var options = {
                       div: "map",
                       controls: [],
-                      projection: "EPSG:900913",
-                      displayProjection: new OpenLayers.Projection("EPSG:4326"),
+                      projection: sm,
+                      displayProjection: wgs84,
                       numZoomLevels: 20,
                   };
 
                   map = new OpenLayers.Map(options);
+
+                 vector_layer = new OpenLayers.Layer.Vector("lookup", {
+                   projection: wgs84,
+                 });
+
+
+                 geojson_format = new OpenLayers.Format.GeoJSON({
+                   'internalProjection': sm,
+                   'externalProjection': wgs84
+                 });
+
 
                   var base = new OpenLayers.Layer.TMS("Base", "",
                   {
@@ -297,19 +311,7 @@
                                 $('#data').append("<dl>" + text + "</dl>");
                                 $('#data').append("<hr>");
                                 features = geojson_format.read(d);
-                                vector_layer.addFeatures(_.map(features, function(f) { 
-                                  f.style = new OpenLayers.Style({
-                                    display: 'show', // anything but 'none' would work
-                                    stroke: true,
-                                    fill: true,
-                                    strokeWidth: 5,
-                                    strokeColor: '#ff0000'
-                                  });
-                                  return f;
-                                }));
-                                console.log(vector_layer.features);
-                                vector_layer.redraw();
-                                vector_layer.setVisibility(true);
+                                vector_layer.addFeatures(features);
                               });
                             });
                           }
