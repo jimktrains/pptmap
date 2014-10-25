@@ -1,13 +1,10 @@
 from flask import Flask
-from flask.ext.cors import CORS
 import json
 from gen_tile import get_renderers
 from osgeo import ogr
 import mapnik
 
 app = Flask(__name__)
-
-cors = CORS(app, resources={r"/*": {"origins": "*"}});
 
 renderers = get_renderers('styles', 16)
 
