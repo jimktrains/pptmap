@@ -57,7 +57,12 @@ def query(layer, x, y):
                 if go_forward:
                     internal_id = l.name + "|" + feat.attributes['geoid']
                     if internal_id not in has_seen:
-                        feats.append(json.loads(feat.to_geojson()))
+                        feat = json.loads(feat.to_geojson())
+                        # For some reason, on the server an [0,0] gets
+                        # added to th end of the list, lets just remove it
+                        if feat['geometry']['coordinates'][0][-1] == [0,0]:
+                            feat['geometry']['coordinates'][0].pop()
+                        feats.append(feat)
                         has_seen.add(internal_id)
         return json.dumps(feats), 200, {
             'Content-Type': 'application/json',
