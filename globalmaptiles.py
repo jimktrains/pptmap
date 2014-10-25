@@ -194,7 +194,6 @@ class GlobalMercator(object):
         "Converts pixel coordinates in given zoom level of pyramid to EPSG:900913"
 
         res = self.Resolution( zoom )
-        print "res=",res
         mx = px * res - self.originShift
         my = py * res - self.originShift
         return mx, my
@@ -352,14 +351,6 @@ class GlobalGeodetic(object):
 if __name__ == "__main__":
     import sys, os
         
-
-    m = GlobalMercator()
-
-    print m.TileLatLonBounds(284,638, 10)
-    print m.TileLatLonBounds(284,637, 10)
-
-    sys.exit(0)
-
     def Usage(s = ""):
         print "Usage: globalmaptiles.py [-profile 'mercator'|'geodetic'] zoomlevel lat lon [latmax lonmax]"
         print

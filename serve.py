@@ -39,7 +39,6 @@ def query(layer, x, y):
     has_seen = set()
     if layer in renderers:
         for l in renderers[layer].m.layers:
-            print "Querying from " + l.name + " @ " + str(p)
             for feat in l.datasource.features_at_point(p):
                 # features_at_point seems to use the bounding box
                 # and/or a buffer for each feature. As a result the numbr
