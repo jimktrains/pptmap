@@ -49,6 +49,7 @@
             <script src="jquery-2.1.1.min.js"></script>
             <script src="languages.min.js"></script>
             <script src="numeral.min.js"></script>
+            <script src="purl.js"></script>
             <script src="/ui/1.11.2/jquery-ui.js"></script>
             <link rel="stylesheet" href="/ui/1.11.2/jquery-ui.theme.min.css" />
             <script>
@@ -222,6 +223,19 @@
                     zoom_out_box.deactivate();
                     break;
                 }
+               });
+               
+              console.log($.url().param('ql'));
+              ql = $.url().param('ql');
+              if (ql) {
+                $("#quick-links").val(ql).change();
+              }
+
+               $("#quick-links").change(function(e) {
+                console.log(e);
+                url = window.location.protocol + "//" + window.location.host + $(this).find(':selected').data('url') + "&ql=" + $(this).val();
+                console.log(url);
+                window.location = url;
                });
 
                $("#check_isos").change(function(e) {
@@ -406,11 +420,13 @@
                 <div id="map"></div>
                 <div id="data"></div>
                 <div id="route-container">
-                  <div id="quick-links">
+                  <div id="quick-links-container">
                     <h3>Quick Links</h3>
-                    <p><a href="/">All of the County</a></p>
-                    <p><a href="/?zoom=14&lat=40.38041&lon=-79.95314&layers=BFFTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFT">Baldwin</a></p>
-                    <p><a href="/?zoom=14&lat=40.50165&lon=-80.14394&layers=BFFTFFFFFFFFFFFFFFFTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFT">Groveton</a></p>
+                    <select id="quick-links">
+                      <option value="default" data-url="/" selected="selected">All of the County</option>
+                      <option value="baldwin" data-url="/?zoom=14&lat=40.38041&lon=-79.95314&layers=BFFTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFTTTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFT">Baldwin</option>
+                      <option value="groveton" data-url="/?zoom=14&lat=40.50165&lon=-80.14394&layers=BFFTFFFFFFFFFFFFFFFTFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFT">Groveton</option>
+                    </select>
                   </div>
                   <div id="tools">
                     <h3>Drag Action<div title="When clicking-and-dragging the map, this controls what the map does. <ul><li>'Pan' will move the map</li><li>'Zoom In' will let you draw a box that the map zooms around.</li><li>'Zoom Out' lets you draw a box to zoom out.</li><ul>" class="ui-icon ui-icon-help"></div></h3>
